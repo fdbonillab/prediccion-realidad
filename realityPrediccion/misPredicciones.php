@@ -408,13 +408,7 @@
                     <div>
                  
             </dialog>
-            <p>...
-                       &nbsp;
-                       &nbsp;
-                       &nbsp;
-                       &nbsp;
-                       &nbsp;
-            </p>
+            <p style="margin-bottom:3cm;"></p>
         </div>
     <?php } else { ?>
     <div class="bgimg">

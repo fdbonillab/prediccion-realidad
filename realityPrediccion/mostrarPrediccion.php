@@ -59,10 +59,15 @@
             if( $idUsuario != null){
                 $sqlUsuario = "SELECT nombre FROM `usuario` where id = ".$_GET['idUsuario'];
                 $resUsuario = mysqli_query($db, $sqlUsuario);
-                $nombreUsuario = mysqli_fetch_row($resUsuario)[0];
+                $nombreUsuario = mysqli_fetch_row($resUsuario)[0];?>
+                <h1>Estas fueron las predicciones de <?= $nombreUsuario?></h1>
+                <?php
+            } else {?>
+                <h1>Estas fueron tus predicciones <?= $nombreUsuario?></h1>
+                <?php
             }
             ?>
-        <h1>Estas fueron tus predicciones <?= $nombreUsuario?></h1>
+       
       
 
             <?php
@@ -97,5 +102,8 @@
                        <tr><td> <?= $row[1]?> </td></tr>
                  <?php $totalPuntos+=$row[3];} } ?><tr><td><p style="font-size:40px"> Total puntos </p></td>
                  <td colspan="2"><p style="font-size:40px"><?= $totalPuntos?></p></td></tr></table>
+                 <!-- para q se vea la fila de total -->
+                 <p style="margin-bottom:3cm;"></p>
+
         </div>
     <?php require_once 'includes/footer.php' ?>
